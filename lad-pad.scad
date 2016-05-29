@@ -1,8 +1,12 @@
-r1=8.25;
-//r2=8;
+r=8.25;
 l=8;
-
-hull () {
-    translate ([0, l, 0]) circle (r1, center=true);
-    square (r1*2, center=true);
+module lad_pad(){
+   linear_extrude(height=1, convexity){
+      hull () {
+        translate ([0, l, 0]) circle (r, fn=100, center=true);
+        square (r *2, center=true);
+  }
+ }
 }
+
+//lad_pad();
