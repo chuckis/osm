@@ -75,18 +75,19 @@ module tu_rombs(){
 }
 //tu-rombs(); on z-axis [-0.7 0.7]
 
+//d.b.15mm
 module rombos(){
 	difference(){
 		difference(){
 				linear_extrude(height=2) {
 				hull () {
 					translate ([0, 5.5, 0]) circle (5.5, center=true);
-					square ([11, 10], center=true);
+					square ([11, 9], center=true);
 			    }  
 			}
 		          translate([10.3, -3.1, 1.7]) rotate ([0, 0, 55]) tu_rombs();
 		}
-		translate([0, 0, 1.2]) inner_obod();
+		translate([0, 0, 1.3]) inner_obod();
 	}
 }
 
@@ -94,8 +95,8 @@ module rombos(){
 module inner_obod(){
 linear_extrude(height = 1) {
 	hull () {
-        translate ([0, 5.8, 0]) circle ( 6.12, center=true);
-        square ([ 12.24, 11 ], center=true);
+        translate ([0, 6.0, 0]) circle ( 6.12, center=true);
+        square ([ 12.24, 10.0 ], center=true);
    }
    }
 }
